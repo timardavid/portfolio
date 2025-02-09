@@ -1,0 +1,408 @@
+/* Alapértelmezett stílusok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+  }
+  
+  /* Header & Navbar (a korábbi stílusokhoz igazítva) */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-out;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 350px 0 350px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-transform: uppercase;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+    padding: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.4s;
+  }
+  
+  nav ul li.active a,
+  nav ul li a.active {
+    transform: scale(1.5);
+  }
+  
+  nav ul li.adjacent a {
+    transform: scale(1.2);
+  }
+  
+  nav ul li a:hover {
+    color: rgb(243, 207, 141);
+    font-size: 22px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh; /* Teljes képernyő magasság */
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('my_picture.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  /* Overlay a könnyebb olvashatóság érdekében */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Hero tartalom: flexbox két oszlopra osztva */
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5%;
+  }
+  
+  /* Bal oldali szöveg stílusa (a welcome oldalhoz hasonlóan) */
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
+    color: white;
+  }
+  
+  .hero-text h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: glow 4s infinite alternate;
+  }
+  
+  .hero-text p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* More Info gomb: a welcome oldal gombstílusa alapján */
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .hero-btn:hover {
+    background: #fff;
+    color: #000;
+    animation: zoomInOut 0.5s ease-in-out;
+  }
+  
+  /* Jobb oldali kép stílusa */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(243, 207, 141, 0.5);
+  }
+  
+  .skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.skills-container img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: -30px;
+}
+
+.skills-content {
+    text-align: center;
+    color: white;
+}
+
+.skills-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: wheat;
+}
+
+.skills-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.select {
+  padding: 10px;
+  display: grid;
+  margin-left: 160px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #f3cf91;
+  transition: 0.5s;
+}
+
+.select:hover {
+  background-color: #eeaa34;
+  color: #000;
+  cursor: pointer;
+}
+
+label {
+  font-size: 18px;
+}
+
+/* Fun Facts szekció */
+.facts {
+  width: 60%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(243, 207, 141, 0.6);
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+
+.facts h2 {
+  font-size: 36px;
+  color: wheat;
+  margin-bottom: 20px;
+}
+
+.fun-facts {
+  list-style: none;
+  padding: 0;
+}
+
+.fun-facts li {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(243, 207, 141, 0.2);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.fun-facts li:hover {
+  background: rgba(243, 207, 141, 0.5);
+  transform: translateX(5px);
+}
+
+/* Funny Story szekció - Új dizájn */
+.funny-story {
+  width: 60%;
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(243, 207, 141, 0.2), rgba(255, 255, 255, 0.05));
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(243, 207, 141, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.funny-story:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(243, 207, 141, 0.5);
+}
+
+/* Címek */
+.funny-story h2 {
+  font-size: 34px;
+  color: #f3cf91;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Vicces történet szövege */
+.funny-story p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s;
+}
+
+.funny-story p:hover {
+  background: rgba(243, 207, 141, 0.2);
+  color: #fff;
+}
+
+/* Motto */
+.funny-story blockquote {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+  color: #f3cf91;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 5px solid rgba(243, 207, 141, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.funny-story blockquote:hover {
+  background: rgba(243, 207, 141, 0.3);
+  transform: scale(1.05);
+}
+
+/* CV Letöltő gomb - Új stílus */
+.cv-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(135deg, rgba(243, 207, 141, 0.8), rgba(255, 192, 72, 0.8));
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(243, 207, 141, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+  background: linear-gradient(135deg, rgba(243, 207, 141, 1), rgba(255, 192, 72, 1));
+  box-shadow: 0 6px 15px rgba(243, 207, 141, 0.6);
+  transform: scale(1.1);
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+  .funny-story {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .funny-story h2 {
+    font-size: 28px;
+  }
+
+  .funny-story p {
+    font-size: 18px;
+  }
+
+  .funny-story blockquote {
+    font-size: 20px;
+  }
+
+  .cv-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+
+/* Reszponzív design */
+@media (max-width: 768px) {
+  .facts {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .facts h2 {
+    font-size: 28px;
+  }
+
+  .fun-facts li {
+    font-size: 18px;
+  }
+}
+
+
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+  
+  /* Animációk */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(243,207,141,0.5); }
+    50% { text-shadow: 0 0 20px rgba(243,207,141,1); }
+    100% { text-shadow: 0 0 10px rgba(243,207,141,0.5); }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  

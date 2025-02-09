@@ -42,7 +42,7 @@
     align-items: center;
     padding: 10px 20px;
     border: 2px solid #fff;
-    border-radius: 5px;
+    border-radius: 20px;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -75,14 +75,15 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 350px;
+    margin-right: 350px;
     margin-top: 20px;
     border: 2px solid white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    text-transform: uppercase;
   }
   
   nav ul {
@@ -173,42 +174,63 @@
   }
   
   .skill-item {
-    background-color: #222;
+    position: relative;
+    background: #222;
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   }
   
+  /* Pseudo-element, ami a finom gradient animációt hozza létre */
+  .skill-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(243,207,141,0.4), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  /* Amikor hover, az overlay elcsúszik, majd kilép a látható területből */
+  .skill-item:hover::before {
+    left: 100%;
+  }
+  
+  /* Elem emelése és árnyékolása hover esetén */
   .skill-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(243, 207, 141, 0.8);
-    border: 2px solid rgb(243, 207, 141);
-    z-index: 10;
-    animation: zoomInOut 0.3s ease-in-out;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(243,207,141,0.5);
+    background: #2a2a2a;
   }
   
+  /* Az ikon méretének és színének módosítása */
   .skill-item i {
     font-size: 60px;
-    color: white;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s, visibility 0.3s;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
   
+  .skill-item:hover i {
+    transform: scale(1.2);
+    color: #f3cf8d;
+  }
+  
+  /* A szöveg lassú megjelenítése */
   .skill-item p {
     font-size: 16px;
     color: wheat;
     margin-top: 10px;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.4s ease 0.2s;
   }
   
   .skill-item:hover p {
-    visibility: visible;
+    opacity: 1;
   }
+  
   
   /* Which i like to use */
   #cards {
@@ -245,7 +267,8 @@
   
   .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(243, 207, 141, 0.8);
+    box-shadow: 0 0 20px rgba(243, 207, 141, 0.8);
+    border-color: rgb(243, 207, 141);
   }
   
   .card h3 {
@@ -354,15 +377,18 @@
   .contact-details h3 {
     color: wheat;
     font-size: 18px;
+    margin-left: 8px;
   }
   .contact-details p {
     margin: 5px 0;
     color: wheat;
   }
+
   .footer-icons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    cursor: pointer;
   }
   .footer-icons a {
     color: wheat;
