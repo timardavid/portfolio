@@ -1,156 +1,250 @@
 <!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <title>Portfólió</title>
-</head>
-<body>
-    <!-- Welcome Section -->
-  <section id="welcome">
-    <div class="welcome-content">
-      <h1>Welcome to my portfolio</h1>
-      <p>My name is Timár Dávid</p>
-      <a href="#main" class="btn">
-        <i class="fas fa-chevron-down"></i> Let's get started!
-      </a>
-    </div>
-  </section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <section id="welcome">
+      <div class="welcome-content">
+        <h1>Welcome to my portfolio</h1>
+        <p>My name is Timár Dávid</p>
+        <a href="#main" class="btn">
+          <i class="fas fa-chevron-down"></i> Let's get started!
+        </a>
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#welcome">Home</a></li>
-        <li><a href="./About_me/about_me.html">About Me</a></li>
-        <li><a href="#footer">Contact Me</a></li>
-        <li><a href="#about-me">Skills</a></li>
-        <li><a href="./my_works/my-works.html">My Works</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- Main Section -->
-  <main id="main">
-    <div class="content-section">
-      <h1>Im a Web Designer <br> & Developer</h1>
-      <p>"Life is not about finding yourself, <br> it's about creating yourself." – George Bernard Shaw</p>
-    </div>
-  </main>
-  
-  <!-- About Me Section -->
-  <section id="about-me">
-    <h2>List of languages & tools that I use!</h2>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <i class="fab fa-github"></i>
-        <p>GitHub</p>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-paper-plane"></i>
-        <p>Postman</p>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-angular"></i>
-        <p>Angular</p>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-database"></i>
-        <p>MySQL</p>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-figma"></i>
-        <p>Figma</p>
-      </div>
-      <!-- Második sor: 5 ikon -->
-      <div class="skill-item">
-        <i class="fas fa-coffee"></i>
-        <p>Java</p>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-html5"></i>
-        <p>HTML</p>
-      </div>
-      <div class="skill-item center-icon">
-        <i class="fab fa-css3-alt"></i>
-        <p>CSS</p>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-js-square"></i>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-code"></i>
-        <p>TypeScript</p>
-      </div>
-    </div>
-  </section>
+    <header>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#welcome">Home</a></li>
+          <li><a href="#main">About Me</a></li>
+          <li><a href="#about-me">Skills</a></li>
+          <li><a href="#my-works">My Works</a></li>
+          <li><a href="#footer">Contact Me</a></li>
+        </ul>
+        <div id="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
 
-<!-- Cards Section -->
-<section id="cards">
-    <h2>The ones I use</h2>
-    <div class="cards-container">
-      <div class="card">
-        <h3>Web Design</h3>
-        <p>I like to design because I like things that are clean and well put together. You invent, shape, and shape everything, and that's why I want to work in it.</p>
+    <main id="main" class="scroll-hidden">
+      <div class="content-section">
+        <h1>
+          I'm a Web Designer <br />
+          & Developer
+        </h1>
+        <p>
+          "Life is not about finding yourself, <br />
+          it's about creating yourself." – George Bernard Shaw
+        </p>
       </div>
-      <div class="card">
-        <h3>Frontend develop</h3>
-        <p>I like frontend development, because this is where I create the user experience, and this is where the coding part is already included.</p>
-      </div>
-      <div class="card">
-        <h3>Softver develop</h3>
-        <p>I like software development because I work with logical and innovative solutions.</p>
-      </div>
-    </div>
-</section>
+    </main>
 
-<!-- Image Gallery Section -->
-<section id="image-gallery">
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <div class="above-text">Future works & goals</div>
-            <img src="./photos/frontend_work.jpg" alt="Image 1">
-            <div class="caption">Frontend</div>
+    <section id="about-me" class="scroll-hidden">
+      <h2>List of languages & tools that I use!</h2>
+      <div class="skills-grid">
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-angular"></i>
+          <p>Angular</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-html5"></i>
+          <p>HTML</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-js-square"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fas fa-code"></i>
+          <p>TypeScript</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-bootstrap"></i>
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-github"></i>
+          <p>GitHub</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fas fa-paper-plane"></i>
+          <p>Postman</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-jira"></i>
+          <p>Jira</p>
+        </div>
+        <div class="skill-item scroll-scale">
+          <i class="fab fa-figma"></i>
+          <p>UI/UX Design</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="scroll-hidden">
+      <h2>The ones I use</h2>
+      <div class="cards-container">
+        <div class="card scroll-scale">
+          <h3>Web Design</h3>
+          <p>
+            I like to design because I like things that are clean and well put
+            together. You invent, shape, and shape everything, and that's why I
+            want to work in it.
+          </p>
+        </div>
+        <div class="card scroll-scale">
+          <h3>Frontend develop</h3>
+          <p>
+            I like frontend development, because this is where I create the user
+            experience, and this is where the coding part is already included.
+          </p>
+        </div>
+        <div class="card scroll-scale">
+          <h3>Software develop</h3>
+          <p>
+            I like software development because I work with logical and
+            innovative solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="my-works" class="scroll-hidden">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <div class="project-row scroll-left">
+          <div class="project-image">
+            <img src="./photos/himesiovoda.png" alt="Himesházi Óvoda honlap" />
           </div>
-          
-      <!-- 2. kép -->
-      <div class="gallery-item">
-        <img src="./photos/webdesign_work.jpg" alt="Image 2">
-        <div class="caption">Web Design</div>
+          <div class="project-details">
+            <h3>Himesházi Kindergarten</h3>
+            <p>
+              A modern and responsive website designed and developed for the
+              Himesházi Kindergarten. The main goal of the project was to create
+              an easy-to-use interface where parents can quickly access the most
+              important information.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row reverse scroll-right">
+          <div class="project-image">
+            <img
+              src="./photos/Képernyőfotó 2025-02-09 - 14.11.23.png"
+              alt="Best Car Rental Website"
+            />
+          </div>
+          <div class="project-details">
+            <h3>Best Car Rental</h3>
+            <p>
+              A web application for a fictional car rental company, providing a
+              simple and intuitive interface for Browse and booking cars. The
+              design is clean and elegant, highlighting the selected vehicles.
+            </p>
+            <div class="project-links"></div>
+          </div>
+        </div>
       </div>
-      <!-- 3. kép -->
-      <div class="gallery-item">
-        <img src="./photos/business_work.jpg" alt="Image 3">
-        <div class="caption">Own company</div>
+    </section>
+
+    <section id="image-gallery" class="scroll-hidden">
+      <div class="gallery-container">
+        <div class="gallery-item scroll-scale">
+          <div class="above-text">Future works & goals</div>
+          <img src="./photos/frontend_work.jpg" alt="Image 1" />
+          <div class="caption">Frontend</div>
+        </div>
+
+        <div class="gallery-item scroll-scale">
+          <img src="./photos/webdesign_work.jpg" alt="Image 2" />
+          <div class="caption">Web Design</div>
+        </div>
+        <div class="gallery-item scroll-scale">
+          <img src="./photos/business_work.jpg" alt="Image 3" />
+          <div class="caption">Own company</div>
+        </div>
+        <div class="gallery-item scroll-scale">
+          <img src="./photos/AI_work.jpg" alt="Image 4" />
+          <div class="caption">AI</div>
+        </div>
       </div>
-      <!-- 4. kép -->
-      <div class="gallery-item">
-        <img src="./photos/AI_work.jpg" alt="Image 4">
-        <div class="caption">AI</div>
+    </section>
+
+    <section id="fun-facts" class="scroll-hidden">
+      <div class="fun-facts-container">
+        <div class="fun-fact-card scroll-right">
+          <i class="fas fa-laugh-squint"></i>
+          <h3>Disney Fun Fact</h3>
+          <p>
+            There's been a time I teared up watching a Disney movie (yes, a
+            cartoon).
+          </p>
+        </div>
+        <div class="fun-fact-card scroll-right">
+          <i class="fas fa-check-double"></i>
+          <h3>The Checker</h3>
+          <p>
+            Before I leave home, I check everything at least six times to make
+            sure I've locked the door and turned off the lights.
+          </p>
+        </div>
+        <div class="fun-fact-card scroll-right">
+          <i class="fas fa-wine-glass-alt"></i>
+          <h3>Talkative Tim</h3>
+          <p>I tend to become quite talkative after a glass or two.</p>
+        </div>
       </div>
-    </div>
-  </section>
-  
-  <footer id="footer">
-    <div class="footer-left">
-      <h3>I hope you liked what you saw and liked my portfolio, <br> if so, you can contact me here:</h3>
-      <div class="contact-details">
-        <h3>Contact details:</h3>
-        <p>timardavid1974@gmail.com</p>
-        <p>+36 20 803 8081</p>
+    </section>
+
+    <footer id="footer" class="scroll-hidden">
+      <div class="footer-left">
+        <h3>
+          I hope you liked what you saw and liked my portfolio, <br />
+          if so, you can contact me here:
+        </h3>
+        <div class="contact-details">
+          <h3>Contact details:</h3>
+          <p>timardavid1974@gmail.com</p>
+          <p>+36 20 803 8081</p>
+        </div>
       </div>
-    </div>
-    <div class="footer-icons">
-      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-google"></i></a>
-    </div>
-  </footer>
-  
-  <script src="script.js"></script>
-</body>
+      <div class="footer-icons">
+        <a href="# " target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+      </div>
+
+      <div class="download-cv">
+        <a
+          href="./documents/Timar_David_CV (1).pdf"
+          download="Timar_David_CV.pdf"
+          class="cv-button"
+        >
+          <i class="fas fa-download"></i> Download My CV
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
