@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tímár Dávid – WordPress fejlesztő és Designer. 2+ év design és 1 év fejlesztői tapasztalat, önálló munkavégzés.">
+    <meta property="og:title" content="Tímár Dávid | WordPress Fejlesztő & Designer">
+    <meta property="og:description" content="Tímár Dávid – WordPress fejlesztő és Designer. 2+ év design és 1 év fejlesztői tapasztalat, önálló munkavégzés.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./photos/rolam.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tímár Dávid | WordPress Fejlesztő & Designer">
+    <meta name="twitter:description" content="Tímár Dávid – WordPress fejlesztő és Designer. 2+ év design és 1 év fejlesztői tapasztalat, önálló munkavégzés.">
+    <title>Tímár Dávid | WordPress Fejlesztő & Designer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Timár<span>Dávid</span></a>
+
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-spotlight" id="navSpotlight"></div>
+                <a href="#about" class="nav-link">Rólam</a>
+                <a href="#timeline" class="nav-link">Tanulmányok</a>
+                <a href="#references" class="nav-link">Referenciák</a>
+                <a href="#skills" class="nav-link">Technológiák</a>
+                <a href="#contact" class="nav-link">Kapcsolat</a>
+            </div>
+
+            <a href="./dokumentum/CV - Timár Dávid.pdf" class="nav-cta" download>
+                <i class="fas fa-download" style="margin-right:6px;font-size:0.8rem;"></i>CV Letöltés
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">Rólam</a>
+        <a href="#timeline" class="mobile-link">Tanulmányok</a>
+        <a href="#references" class="mobile-link">Referenciák</a>
+        <a href="#skills" class="mobile-link">Technológiák</a>
+        <a href="#contact" class="mobile-link">Kapcsolat</a>
+        <a href="cv-timar-david.pdf" class="mobile-link" download style="color:var(--color-accent);">
+            <i class="fas fa-download"></i> CV Letöltés
+        </a>
+    </div>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-slideshow" id="heroSlideshow">
+                <div class="hero-slide active">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80"
+                        alt="Fejlesztés Háttér">
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+            <div class="hero-grid-pattern"></div>
+
+            <div class="container">
+                <div class="hero-content hero-content--portfolio">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Azonnal munkába állható</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span class="hero-title-line"><span class="hero-name">Timár Dávid</span></span>
+                            <span class="hero-title-line"><span>WordPress Fejlesztő</span></span>
+                            <span class="hero-title-line hero-title-line--dim"><span>& Designer</span></span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Tapasztalt szakembert keresel a csapatodba? Önállóan végigviszem a projekteket a Figma
+                            vizuális tervezésétől a tökéletesen működő WordPress oldalig, zökkenőmentes
+                            ügyfélkommunikációval.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="#references" class="btn-primary">
+                                <span>Eddigi munkáim</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn-secondary">
+                                <span>Lépjünk kapcsolatba</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-photo">
+                        <div class="hero-photo-frame">
+                            <img src="./photos/rolam.jpeg" alt="Tímár Dávid - WordPress Fejlesztő">
+                        </div>
+                        <div class="hero-photo-badge">
+                            <i class="fab fa-wordpress"></i>
+                            <span>Profi WordPress</span>
+                        </div>
+                        <div class="hero-photo-badge hero-photo-badge--2">
+                            <i class="fas fa-comments"></i>
+                            <span>Jó kommunikáció</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <span>Görgess</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-wrapper">
+                    <span class="section-tag reveal">
+                        <i class="fas fa-user-tie"></i> Szakmai profil
+                    </span>
+
+                    <h2 class="about-title reveal reveal-delay-1">
+                        Mit érdemes tudni <span>rólam</span>?
+                    </h2>
+
+                    <p class="about-text reveal reveal-delay-2">
+                        Elsősorban egyedi WordPress alapú weboldalak fejlesztésével és karbantartásával foglalkozom.
+                        Kiemelkedő előnyöm, hogy <strong>designerként már több mint 2 év tapasztalattal</strong>
+                        rendelkezem, így az esztétika és a funkcionalitás kéz a kézben jár a munkáimban. Emellett
+                        <strong>1 év intenzív, gyakorlati tapasztalatot szereztem WordPress fejlesztésben és közvetlen
+                            ügyfélkommunikációban</strong>. Otthonosan mozgok a Figmában, a vizuális koncepció
+                        megtervezésétől a stabil kódolásig a teljes folyamatot önállóan átlátom.
+                    </p>
+
+                    <p class="about-text about-text--spaced reveal reveal-delay-3">
+                        Számomra a fejlesztés nem csak technikai feladat. Számos projektet vittem végig úgy, hogy az
+                        ügyfelekkel történő egyeztetéstől az átadásig mindent én menedzseltem. Ennek köszönhetően erős
+                        problémamegoldó képességgel és ügyfélközpontú szemlélettel rendelkezem. Megbízhatóan és önállóan
+                        dolgozom, kész vagyok azonnali értéket teremteni az új munkahelyemen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline">
+            <div class="container">
+                <div class="timeline-header">
+                    <span class="section-tag reveal">
+                        <i class="fas fa-graduation-cap"></i> Tanulmányok
+                    </span>
+                    <h2 class="timeline-title reveal reveal-delay-1">Végzettségek és Háttér</h2>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2025</span>
+                            <h3 class="timeline-item-title">Webdesigner</h3>
+                            <p class="timeline-item-desc">
+                                UI/UX alapok, egyedi arculatok és weboldalak vizuális megtervezése Figma és egyéb modern
+                                szoftverek segítségével. Vizuális problémamegoldás a weben.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal reveal-delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2025</span>
+                            <h3 class="timeline-item-title">Szoftverfejlesztő és Tesztelő</h3>
+                            <p class="timeline-item-desc">
+                                Komplex programozási és tesztelési ismeretek, kódolási alapelvek és stabil algoritmikus
+                                gondolkodás elsajátítása.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal reveal-delay-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023</span>
+                            <h3 class="timeline-item-title">Érettségi - Pécs</h3>
+                            <p class="timeline-item-desc">
+                                Gimnáziumi tanulmányok elvégzése és sikeres érettségi vizsga Pécsen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="references">
+            <div class="container">
+                <div class="references-header">
+                    <span class="section-tag reveal">
+                        <i class="fas fa-code"></i> Referenciák
+                    </span>
+                    <h2 class="references-title reveal reveal-delay-1">Legutóbbi Munkáim</h2>
+                    <p class="about-text references-intro reveal reveal-delay-2">Minden
+                        projektet az ügyfelekkel történő egyeztetéstől az átadásig én vittem végig, vagy aktívan részt
+                        vettem a teljesítésükben. <b>A kártyákra kattintva megnyílnak az élő weboldalak.</b></p>
+                </div>
+
+                <div class="references-filters reveal reveal-delay-2">
+                    <button class="filter-btn active" data-filter="all">Összes Munka</button>
+                    <button class="filter-btn" data-filter="uzleti">Üzleti & E-commerce</button>
+                    <button class="filter-btn" data-filter="egyeb">Alapítvány & Portfólió</button>
+                </div>
+
+                <div class="references-grid">
+                    <a href="https://onevent.hu" target="_blank" class="reference-card reveal" data-category="uzleti">
+                        <div class="reference-card-image">
+                            <img src="./photos/onevent.png" alt="OnEvent.hu">
+                            <span class="reference-card-category">Rendezvényszervezés</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">OnEvent.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Komplex rendezvényszervező és eseménykezelő platform
+                                fejlesztése és designja.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Figma</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://borsohazpecs.hu" target="_blank" class="reference-card reveal reveal-delay-1"
+                        data-category="egyeb">
+                        <div class="reference-card-image">
+                            <img src="./photos/borsohazpecs.png" alt="Borsohazpecs.hu">
+                            <span class="reference-card-category">Alapítvány</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">Borsohazpecs.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Helyi, pécsi üzletág számára készített egyedi, letisztult
+                                bemutatkozó weboldal.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Design</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://fogdakezemalapitvany.hu" target="_blank"
+                        class="reference-card reveal reveal-delay-2" data-category="egyeb">
+                        <div class="reference-card-image">
+                            <img src="./photos/fogdakezem.png" alt="Fogdakezemalapitvany.hu">
+                            <span class="reference-card-category">Alapítvány</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">Fogdakezemalapitvany.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Jótékonysági szervezet webes jelenlétének biztosítása,
+                                adományozói funkciókkal.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Nonprofit</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://selfierent.hu" target="_blank" class="reference-card reveal" data-category="uzleti">
+                        <div class="reference-card-image">
+                            <img src="./photos/selfierent.png" alt="Selfierent.hu">
+                            <span class="reference-card-category">Szolgáltatás</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">Selfierent.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Fotógép bérbeadással foglalkozó vállalkozás modern
+                                bemutatkozó és foglaló oldala.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Egyedi Design</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://minicokft.hu" target="_blank" class="reference-card reveal reveal-delay-1"
+                        data-category="uzleti">
+                        <div class="reference-card-image">
+                            <img src="./photos/minico.png" alt="Minicokft.hu">
+                            <span class="reference-card-category">Vállalati oldal</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">Minicokft.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Céges portfólió és szolgáltatásokat bemutató reszponzív
+                                weboldal elkészítése.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">B2B</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://merchantlog.hu" target="_blank" class="reference-card reveal reveal-delay-2"
+                        data-category="uzleti">
+                        <div class="reference-card-image">
+                            <img src="./photos/merchantlog.png" alt="Merchantlog.hu">
+                            <span class="reference-card-category">Logisztika</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">Merchantlog.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Logisztikai és szállítmányozási szolgáltató cég
+                                professzionális webes arculata.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Vállalati</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://school-box.eu" target="_blank" class="reference-card reveal" data-category="egyeb">
+                        <div class="reference-card-image">
+                            <img src="./photos/schoolbox.png" alt="School-box.eu">
+                            <span class="reference-card-category">Oktatás</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">School-box.eu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Oktatási tematikájú platform építése, integrált
+                                tartalomkezelési megoldásokkal.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Platform</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://erdelyialexandra.hu" target="_blank" class="reference-card reveal reveal-delay-1"
+                        data-category="egyeb">
+                        <div class="reference-card-image">
+                            <img src="./photos/erdelyialexandra.png" alt="Erdelyialexandra.hu">
+                            <span class="reference-card-category">Portfólió</span>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title">erdelyialexandra.hu <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
+                            <p class="reference-card-desc">Személyes szakmai portfólió, letisztult, elegáns és
+                                felhasználóbarát dizájnnal.</p>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">WordPress</span>
+                                <span class="reference-tag">Személyes Brand</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="reference-card reference-card--maintenance reveal reveal-delay-2" data-category="egyeb">
+                        <div class="reference-card-content reference-card-content--full">
+                            <h3 class="reference-card-title">Redesign & Karbantartás</h3>
+                            <p class="reference-card-desc">Meglévő rendszerek továbbfejlesztése, funkcióbővítése és
+                                hibajavítása.</p>
+                            <ul class="maintenance-list">
+                                <li>
+                                    <strong><a href="https://verebgepesz.hu" target="_blank"
+                                            style="color: var(--color-text); transition: color 0.3s;"><i
+                                                class="fas fa-tools"
+                                                style="color: var(--color-accent); margin-right: 5px;"></i>
+                                            verebgepesz.hu <i class="fas fa-external-link-alt"
+                                                style="font-size: 0.7rem; margin-left: 3px;"></i></a></strong><br>Új kód
+                                    alapú fejlesztések, plusz funkciók integrálása.
+                                </li>
+                                <li>
+                                    <strong><a href="https://pecstortenetealapitvany.hu" target="_blank"
+                                            style="color: var(--color-text); transition: color 0.3s;"><i
+                                                class="fas fa-paint-roller"
+                                                style="color: var(--color-accent); margin-right: 5px;"></i>
+                                            pecstortenetealapitvany.hu <i class="fas fa-external-link-alt"
+                                                style="font-size: 0.7rem; margin-left: 3px;"></i></a></strong><br>Megjelenés
+                                    finomítása és folyamatos támogatás.
+                                </li>
+                            </ul>
+                            <div class="reference-card-tags">
+                                <span class="reference-tag">HTML/CSS/JS</span>
+                                <span class="reference-tag">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="partners partners--skills">
+            <div class="container">
+                <div class="partners-header">
+                    <h3 class="partners-title partners-title--skills reveal">Eszközök,
+                        amiket használok</h3>
+                </div>
+                <div class="partners-grid reveal reveal-delay-1">
+                    <div class="partner-logo"><i class="fab fa-wordpress" style="color: #21759b;"></i> WordPress</div>
+                    <div class="partner-logo"><i class="fab fa-figma" style="color: #f24e1e;"></i> Figma</div>
+                    <div class="partner-logo"><i class="fab fa-html5" style="color: #e34f26;"></i> HTML5</div>
+                    <div class="partner-logo"><i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS3</div>
+                    <div class="partner-logo"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                    <div class="partner-logo"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-wrapper contact-wrapper--centered">
+                    <div class="contact-info contact-info--centered">
+                        <span class="section-tag reveal">
+                            <i class="fas fa-handshake"></i> Kapcsolat
+                        </span>
+                        <h2 class="contact-title reveal reveal-delay-1">Beszéljünk a részletekről!</h2>
+                        <p class="contact-text reveal reveal-delay-2">
+                            A portfóliómban látható munkáimat nagy precizitással és odafigyeléssel végeztem. Ha egy
+                            motivált, önálló fejlesztőt kerestek a csapatba, keressetek az alábbi elérhetőségeken.
+                        </p>
+
+                        <div class="contact-details contact-details--row reveal reveal-delay-3">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-item-content text-left">
+                                    <h4>Email</h4>
+                                    <a href="mailto:timar.david1974@gmail.com">timar.david1974@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-item-content text-left">
+                                    <h4>Telefon</h4>
+                                    <a href="tel:+36208038081">06 20 803 8081</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="padding-top: 20px;">
+                <p class="footer-copyright">
+                    &copy; 2026 Timár Dávid. Minden jog fenntartva.
+                </p>
+                <div class="footer-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Pécs, Magyarország</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
