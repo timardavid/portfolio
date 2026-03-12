@@ -796,6 +796,7 @@ button {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -913,84 +914,6 @@ button {
     letter-spacing: 0.15em;
 }
 
-/* Process Section */
-.process-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.process-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.process-intro {
-    margin: 0 auto;
-}
-
-.process-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.process-step {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.process-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--color-bg-card);
-    border: 2px solid var(--color-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    color: var(--color-accent);
-    margin-bottom: 20px;
-    transition: all var(--transition-base);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.process-step:hover .process-icon {
-    transform: translateY(-10px) scale(1.05);
-    border-color: var(--color-accent);
-    box-shadow: 0 20px 40px var(--color-accent-glow);
-    background: var(--color-bg-hover);
-}
-
-.process-step-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.process-step-desc {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    max-width: 160px;
-}
-
-.process-line {
-    flex: 0 0 40px;
-    height: 2px;
-    background: var(--color-border);
-    margin-top: 40px;
-    position: relative;
-    z-index: 1;
-}
 
 .partners-grid {
     display: flex;
@@ -1225,20 +1148,6 @@ button {
 
     .timeline-dot {
         left: 20px;
-    }
-
-    .process-steps {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .process-line {
-        display: none;
-    }
-
-    .process-step-desc {
-        max-width: 250px;
     }
 
     .references-grid {

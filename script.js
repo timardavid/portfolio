@@ -149,6 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+        
+        // --- Parallax Effekt a Hero szekcióra ---
+        const heroSlideshow = document.getElementById('heroSlideshow');
+        if (heroSlideshow) {
+            heroSlideshow.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+        }
     });
 
 });
