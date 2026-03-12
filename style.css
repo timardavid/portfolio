@@ -822,15 +822,13 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
+    background: var(--color-accent);
+    color: var(--color-text);
+    border: none;
     padding: 12px 28px;
     border-radius: 100px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
@@ -838,7 +836,7 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px var(--color-accent-glow);
 }
 
 .reference-card:hover .reference-card-image img {
