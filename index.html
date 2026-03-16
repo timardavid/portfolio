@@ -398,24 +398,25 @@
                         </div>
                     </a>
 
-                    <a href="https://www.himeshazaovoda.hu/" target="_blank" class="reference-card reveal reveal-delay-2"
-                        data-category="egyeb">
+                    <div class="reference-card reference-card--gallery reveal reveal-delay-2"
+                        data-gallery="himeshaza" data-category="egyeb">
                         <div class="reference-card-image">
-                            <img src="./photos/himeshazaovoda.png" alt="Himeshazaovoda.hu">
-                            <div class="view-project-cta">Megnézem <i class="fas fa-arrow-right"></i></div>
+                            <img src="./photos/hero-resz.png" alt="Himeshazaovoda.hu">
+                            <div class="view-project-cta">Képek megtekintése <i class="fas fa-images"></i></div>
                             <span class="reference-card-category">Oktatás</span>
+                            <span class="badge-wip">Fejlesztés alatt</span>
                         </div>
                         <div class="reference-card-content">
-                            <h3 class="reference-card-title">himeshazaovoda.hu <i class="fas fa-external-link-alt"
-                                    style="font-size: 0.8rem; margin-left: 5px;"></i></h3>
-                            <p class="reference-card-desc">Modern, egyedi dizájnú óvodai bemutatkozó weboldal, gazdag tartalommal és interaktív elemekkel.</p>
+                            <h3 class="reference-card-title">himeshazaovoda.hu <a href="https://www.himeshazaovoda.hu/" target="_blank" class="reference-card-ext-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 5px;"></i></a></h3>
+                            <p class="reference-card-desc">Modern, egyedi dizájnú óvodai bemutatkozó weboldal, gazdag
+                                tartalommal és interaktív elemekkel.</p>
                             <div class="reference-card-tags">
                                 <span class="reference-tag">WordPress</span>
                                 <span class="reference-tag">HTML/CSS/JS</span>
                                 <span class="reference-tag">Custom Design</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     <div class="reference-card reference-card--maintenance reveal reveal-delay-2" data-category="egyeb">
                         <div class="reference-card-content reference-card-content--full">
@@ -549,6 +550,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Lightbox -->
+    <div id="galleryLightbox" class="gallery-lightbox">
+        <button class="gallery-close" id="galleryClose">&times;</button>
+        <button class="gallery-prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="gallery-next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-image-wrap">
+            <img id="galleryImg" src="" alt="">
+        </div>
+        <div class="gallery-counter" id="galleryCounter">1 / 5</div>
+    </div>
 
     <script src="script.js"></script>
 </body>

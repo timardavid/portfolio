@@ -1,5 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Gallery Lightbox ---
+    const galleryImages = {
+        himeshaza: [
+            './photos/hero-resz.png',
+            './photos/himeshazaovoda-2.png',
+            './photos/himeshazaovoda-3.png',
+            './photos/himeshazaovoda-4.png',
+            './photos/himeshazaovoda-5.png',
+        ]
+    };
+
+    const lightbox = document.getElementById('galleryLightbox');
+    const galleryImg = document.getElementById('galleryImg');
+    const galleryCounter = document.getElementById('galleryCounter');
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    function showGalleryImage() {
+        galleryImg.src = currentGallery[currentIndex];
+        galleryCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+    }
+
+    function openGallery(gallery, index = 0) {
+        currentGallery = galleryImages[gallery] || [];
+        currentIndex = index;
+        showGalleryImage();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.reference-card--gallery').forEach(card => {
+        card.addEventListener('click', () => openGallery(card.dataset.gallery));
+    });
+
+    document.getElementById('galleryClose').addEventListener('click', closeGallery);
+
+    document.getElementById('galleryPrev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        showGalleryImage();
+    });
+
+    document.getElementById('galleryNext').addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        showGalleryImage();
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeGallery();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeGallery();
+        if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+            showGalleryImage();
+        }
+        if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % currentGallery.length;
+            showGalleryImage();
+        }
+    });
+
     // --- Fő Navigációs Spotlight Effekt ---
     const navMenu = document.getElementById('navMenu');
     const navSpotlight = document.getElementById('navSpotlight');
@@ -149,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-        
+
         // --- Parallax Effekt a Hero szekcióra ---
         const heroSlideshow = document.getElementById('heroSlideshow');
         if (heroSlideshow) {
