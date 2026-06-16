@@ -3,11 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Gallery Lightbox ---
     const galleryImages = {
         himeshaza: [
-            './photos/hero-resz.png',
-            './photos/himeshazaovoda-2.png',
-            './photos/himeshazaovoda-3.png',
-            './photos/himeshazaovoda-4.png',
-            './photos/himeshazaovoda-5.png',
+            './photos/hho1.png',
+            './photos/hho2.png',
+            './photos/hho3.png',
+            './photos/hho4.png',
+            './photos/hho5.png',
+            './photos/hho6.png',
         ]
     };
 
